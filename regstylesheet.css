@@ -1,0 +1,45 @@
+#reg_div{
+    border: 2px solid lightblue;
+    max-width:350px;
+    text-align: center;
+    display: block;
+    box-sizing: border-box;
+    margin: 60px auto;
+   
+}
+#reg_div h1{
+    background-color:lightblue;
+    color:rgb(16, 87, 168);
+    font-size: :25px;
+    font-family: Roboto;
+    border:2px solid blue;
+    margin-top:0;
+    box-sizing: border-box;
+}
+input[type="email"],input[type="password"],input[type="text"],input[type="number"],input[type="date"]{
+    padding:7px;
+    border:2px solid lightgrey;
+    border-bottom: 2px solid lightblue;  
+    outline:none;
+    width:200px;  
+    font-family:roboto;
+    font-size:18px;
+    border-radius: 20px;
+}
+input[type="submit"]{
+    padding:7px;
+    border:2px solid lightgrey;
+    background-color: skyblue;
+    width:150px; 
+    color:blue;
+    font-family:roboto;
+    font-size: 15px;
+    font-weight: bold;
+    border-radius: 20px;
+    outline:none;
+    cursor:pointer;
+    box-sizing: border-box;
+}
+input[type="submit"]:hover{
+    box-shadow: 0 0 10px darkblue;
+}

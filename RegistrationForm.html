@@ -1,0 +1,51 @@
+<html>
+    <head>
+    <title>Registration Page</title>
+    <link rel="stylesheet" type="text/css" href="regstylesheet.css"/>
+    </head>
+    <body>
+        <div id="reg_div">
+            <h1>Registration Form</h1>
+            <form name="myform" action="#">
+                FirstName<input type="text" id="fname" placeholder="ex: Jayanth"/></br></br>
+                LastName<input type="text" id="lname" placeholder="ex: Surname"/></br></br>
+                Email ID <input type="email" id="emailaddress" placeholder="mail@example.com" autocomplete="off"/><br><br>
+                Mobile No<input type="number" id="phno" placeholder="ex: 8080897651"/></br></br>
+                DateOfBirth<input type="date" id="dob" placeholder="ex: 22-09-1996"/></br></br>
+                Password<input type="password" placeholder="password"/></br><br>
+                <input type="submit" value="Register" onclick="validation()"/></br><br>
+            </form>
+        
+        </div>
+
+        <script type="text/javascript">
+            
+            function validation(){
+                var phoneno = /^\d{10}$/;
+                if(document.getElementById("fname")==""){
+                    alert("FirstName should not be empty!");
+                    return false;
+                }
+                else if(document.getElementById("lname")==""){
+                    alert("LastName should not be empty!");
+                    return false;
+                }
+                else if (!/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(document.getElementById('emailaddress').value))
+                {
+                    alert("you have entered an invalid email address!");
+                    return false; 
+                }
+                else if(!document.getElementById("phno").value.match(phoneno))
+                {
+                    alert("you have entered an invalid mobile number!");
+                    return false;
+                }
+                else{
+                    document.write("Registered Successfully!")
+                    return true;
+                }
+                
+            }
+        </script>
+    </body>
+</html>
